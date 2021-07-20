@@ -10,34 +10,28 @@ class Grade(object):
     def avg(self):
         return sum(self.scores) / len(self.scores)
 
-    @staticmethod
-    def main():
-        grade = Grade(input('name : '))
-        '''
-        kor = int(input('Korean : '))
-        eng = int(input('English : '))
-        math = int(input('Mathematics : '))
-        '''
-        for i in ['Korean','English', 'Math']:
-            grade.addScores(int(input(f'{i} : ')))
 
-        avg = int(grade.avg())
-        if avg >= 90:
-            result = 'A'
-        elif avg >= 80:
-            result = 'B'
-        elif avg >= 70:
-            result = 'C'
-        elif avg >= 60:
-            result = 'D'
-        else:
-            result = 'F'
-
-        print('*' * 100)
-        print(f'Average : {avg}')
-        print(f'Grade : {result}')
-        print('*' * 100)
+def main():
+    grade = Grade(input('name : '))
+    for i in ['Korean', 'English', 'Math']:
+        grade.addScores(int(input(f'{i} : ')))
+    avg = int(grade.avg())
+    if avg >= 90:
+        result = 'A'
+    elif avg >= 80:
+        result = 'B'
+    elif avg >= 70:
+        result = 'C'
+    elif avg >= 60:
+        result = 'D'
+    else:
+        result = 'F'
+    print('*' * 100)
+    print(f'Average : {avg}')
+    print(f'Grade : {result}')
+    print('*' * 100)
 
 
-Grade.main()
+if __name__ == '__main__':
+    main()
 
