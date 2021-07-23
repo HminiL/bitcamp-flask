@@ -2,6 +2,8 @@ from bs4 import BeautifulSoup
 import requests
 import pandas as pd
 
+from commom.menu import print_menu
+
 
 class MusicRanking(object):
 
@@ -57,13 +59,6 @@ class MusicRanking(object):
     def df_to_csv(self):
         path = f'./data/{self.fname}.csv'
         self.df.to_csv(path, sep=',', na_rep='NaN')
-
-
-def print_menu(ls):
-    t = ''
-    for i, j in enumerate(ls):
-        t += str(i) + '-' + j + '\t'
-    return int(input(t))
 
 
 def main():
