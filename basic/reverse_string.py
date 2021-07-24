@@ -3,11 +3,11 @@ def str_to_list(payload: str) -> []:
 
 
 def reverse_list(ls: []) -> []:
-    return []
+    return ls[::-1]
 
 
 def list_to_str(ls: []) -> str:
-    return ''
+    return ''.join(ls)
 
 
 def reverseString(strs: []) -> []:
@@ -15,5 +15,9 @@ def reverseString(strs: []) -> []:
 
 
 if __name__ == '__main__':
-    print(reverseString("안녕하세요"))
+    #print(reverseString("안녕하세요"))
+    print(str_to_list("hello"))
+    print(reverse_list(str_to_list('hello')))
+    print(list_to_str(reverse_list(str_to_list('hello'))))
+    print(reverse_list('hello'))
 
