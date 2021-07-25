@@ -1,3 +1,5 @@
+
+
 def str_to_list(payload: str) -> []:
     return [char for char in payload if char.isalnum()]
 
