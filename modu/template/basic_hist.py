@@ -44,7 +44,6 @@ def show_hist_about(arr: [], month: str):
 
 
 if __name__ == '__main__':
-    # hist_show()
-    # show_hist(dice_random(10))
-    show_hist_about(highest_temperature('11'), '11')
+    show_hist(dice_random(10))
+    # show_hist_about(highest_temperature('11'), '11')
 
