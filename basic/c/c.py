@@ -1,5 +1,6 @@
 def c():
-    print(int(input('a:'))+int(input('b:')))
+    a, b = input().split()
+    print(int(a) + int(b))
 
 
 if __name__ == '__main__':

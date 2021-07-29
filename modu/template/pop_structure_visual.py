@@ -33,7 +33,6 @@ class Population():
     def find_similar_dong(self):
         data = self.data
         name = input('인구 구조가 알고 은싶 지역의 이름(읍면동 단위)을 입력해주세요 : ')
-        home = []
         # home = (np.array(i[3:], dtype=int) for i in data if name in i[0])
         for i in data:
             if name in i[0]:
@@ -41,7 +40,6 @@ class Population():
 
         # plt.rc('font', family='Malgun Gothic')
 
-        print(self.home)
 
     def array_to_list(self, arr:object) -> []:
         return arr.to_list()
@@ -59,5 +57,6 @@ if __name__ == '__main__':
     pop = Population()
     pop.read_data()
     # pop.show_flot(pop.pop_per_dong('역삼2동'))
-    arr_home = pop.list_to_arrary(pop.home)
-    pop.find_similar_dong()
+    # arr_home = pop.list_to_arrary(pop.home)
+    pop.find_similar_dong('필동')
+
